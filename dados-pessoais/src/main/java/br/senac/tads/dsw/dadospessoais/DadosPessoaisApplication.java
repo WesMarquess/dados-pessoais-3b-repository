@@ -10,5 +10,4 @@ public class DadosPessoaisApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DadosPessoaisApplication.class, args);
 	}
-
 }
