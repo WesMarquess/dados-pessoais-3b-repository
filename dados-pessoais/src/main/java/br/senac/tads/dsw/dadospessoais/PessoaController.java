@@ -60,6 +60,7 @@ public class PessoaController {
 		).build();
 	}
 
+
 	@PostMapping
 	public ResponseEntity<?> incluirNovoComValidacao(@RequestBody @Valid PessoaDto pessoa) {
 		pessoaService.incluirNovaPessoa(pessoa);
@@ -75,7 +76,7 @@ public class PessoaController {
 
 	@PutMapping("/{username}")
 	public ResponseEntity<?> atualizar(@PathVariable("username") String username,
-			@RequestBody @Valid PessoaAlteracaoDto pessoa) {
+									   @RequestBody @Valid PessoaAlteracaoDto pessoa) {
 		PessoaDto pessoaAlterada = pessoaService.alterarPessoa(username, pessoa);
 		return ResponseEntity.ok().body(pessoaAlterada);
 	}
